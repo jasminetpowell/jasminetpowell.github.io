@@ -37,7 +37,7 @@ function initialize() {
   console.log('Longitude: ' + myLatLng.longitude);
 
   var marker = new google.maps.Marker({
-        position: pos,
+        position: pos.coords,
         title: 'Position',
         map: map,
         draggable: true,
