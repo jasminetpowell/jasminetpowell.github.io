@@ -49,6 +49,8 @@ function initialize() {
             marker = null;
          }
 	 marker = createMarker(event.latLng, "name", "<b>Location</b><br>"+event.latLng);
+	//display button
+	document.getElementById('go-button').style.display = "block";
   });
 
 

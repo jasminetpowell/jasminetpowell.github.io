@@ -15,6 +15,13 @@
     position : absolute !important; 
     top : 46px !important;  
     right : 0; 
-    bottom : 10px !important;  
+    bottom : 46px !important;  
     left : 0 !important;     
+}
+ #go-button{
+ 	display: none;
+ }
+
+#find-bar{
+	position: relative;
 }
