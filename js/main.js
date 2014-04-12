@@ -30,14 +30,16 @@ function initialize() {
   overlay = new USGSOverlay(bounds, srcImage, map);
   
   function findPosition(pos) {
-  var myLatLng = pos.coords;
+  var crs = pos.coords;
 
   console.log('Your current position is:');
-  console.log('Latitude: ' + myLatLng.latitude);
-  console.log('Longitude: ' + myLatLng.longitude);
+  console.log('Latitude: ' + crs.latitude);
+  console.log('Longitude: ' + crs.longitude);
+
+  var myLatLng = new google.maps.LatLng(crs.latitude, crs.longitude);
 
   var marker = new google.maps.Marker({
-        position: pos.coords,
+        position: myLatLng,
         title: 'Position',
         map: map,
         draggable: true,
