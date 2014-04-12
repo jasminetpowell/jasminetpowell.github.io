@@ -1,0 +1,18 @@
+.sectors{
+	opacity: .6;
+}
+
+#south{
+	background-color: #402B3C;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 600px;
+	top: 500px;
+}
+/*
+#map-container{
+	width: auto;
+	position: absolute;
+}
+*/
