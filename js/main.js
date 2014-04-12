@@ -2,7 +2,7 @@ var pos;
 var marker = null;
 var map = null;
 
-var baseURL = "http://jasminetpowell.github.io/";
+var baseURL = "file:///Users/jasminepowell/Desktop/GroupWalkApp/GroupWalk/jasminetpowell.github.io/";
 
 function initialize() {
 	console.log("called");
@@ -45,7 +45,7 @@ function initialize() {
 
 	navigator.geolocation.getCurrentPosition(findPosition, posError);
 
-	 google.maps.event.addListener(map, 'click', function(event) {
+	google.maps.event.addListener(map, 'click', function(event) {
 	//call function to create marker
          if (marker) {
             marker.setMap(null);
@@ -55,7 +55,7 @@ function initialize() {
 	//display button
 	document.getElementById('go-button').style.display = "block";
 
-  });
+  	});
 
 	var data2 = {
     	"name":"John",
@@ -64,6 +64,7 @@ function initialize() {
     };
 
   	$.post(baseURL + 'php/add_user.php', {'data2': data2}).done(function(response) {
+  		console.log("post called");
   	});
 
 

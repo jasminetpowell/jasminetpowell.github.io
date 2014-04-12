@@ -9,14 +9,14 @@
     <script src="js/jquery-1.7.1.min.js"></script>
     <script src="js/jquery.mobile-1.4.2.min.js"> </script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-    <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.11/firebase.js'></script>
+    <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.11/firebase.js'></script>co
     <script src="js/main.js" type="text/javascript"> </script>
 
   </head> 
-  <body>
+  <body><?php echo "Where are you going?" ?>
     <div data-role="page" id="pin-location">
       <div data-role="header">
-        <h3>Where are you going?</h3>
+        <h3><?php echo "Where are you going?" ?></h3>
         <a href="#users" data-role="button" id="go-button" class="ui-btn-right">Go!</a>
       </div>
       <div id="selection-map"> </div>

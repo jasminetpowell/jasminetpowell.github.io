@@ -1,5 +1,5 @@
 <?php
-$host="annaselonick.com"; // Host name - update all those fields
+$host="box911.bluehost.com:3306"; // Host name - update all those fields
 $username="annaselo_test"; // Mysql username
 $password="Bluefish22!"; // Mysql password
 $db_name="annaselo_groupwalk"; // Database name

@@ -1,5 +1,5 @@
 <?php
-include 'connection.php';
+//include 'connection.php';
 include 'functions.php';
 
 
@@ -29,7 +29,9 @@ if(!isset($error_string)) {
 unset($_POST['submit']);  
 //retuns information back to ajax
 if(isset($error_string))
-  echo $error_string;
+  {echo $error_string;}
 //echo $urlUser;
-else
-  echo $query;
+else {echo $query;}
+
+
+?>
