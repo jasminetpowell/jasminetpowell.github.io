@@ -29,20 +29,27 @@ function initialize() {
   // the bounds of the image, and a reference to the map.
   overlay = new USGSOverlay(bounds, srcImage, map);
   
-  function success1(pos) {
-  var crd = pos.coords;
+  function findPosition(pos) {
+  var myLatLng = pos.coords;
 
   console.log('Your current position is:');
-  console.log('Latitude : ' + crd.latitude);
-  console.log('Longitude: ' + crd.longitude);
-  console.log('More or less ' + crd.accuracy + ' meters.');
+  console.log('Latitude: ' + myLatLng.latitude);
+  console.log('Longitude: ' + myLatLng.longitude);
+
+  var marker = new google.maps.Marker({
+        position: pos,
+        title: 'Position',
+        map: map,
+        draggable: true,
+        visible: true
+    });
 };
 
-function error1(err) {
+function posError(err) {
   console.warn('ERROR(' + err.code + '): ' + err.message);
 };
 
-navigator.geolocation.getCurrentPosition(success1, error1);
+navigator.geolocation.getCurrentPosition(findPosition, posError);
 
 
 }
