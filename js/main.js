@@ -1,6 +1,8 @@
 var overlay;
 USGSOverlay.prototype = new google.maps.OverlayView();
 
+var pos;
+
 function initialize() {
 	var mapOptions = {
 		zoom: 16,
@@ -26,6 +28,23 @@ function initialize() {
   // The custom USGSOverlay object contains the USGS image,
   // the bounds of the image, and a reference to the map.
   overlay = new USGSOverlay(bounds, srcImage, map);
+  
+  function success1(pos) {
+  var crd = pos.coords;
+
+  console.log('Your current position is:');
+  console.log('Latitude : ' + crd.latitude);
+  console.log('Longitude: ' + crd.longitude);
+  console.log('More or less ' + crd.accuracy + ' meters.');
+};
+
+function error1(err) {
+  console.warn('ERROR(' + err.code + '): ' + err.message);
+};
+
+navigator.geolocation.getCurrentPosition(success1, error1);
+
+
 }
 
 /** @constructor */
