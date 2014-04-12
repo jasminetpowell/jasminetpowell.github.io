@@ -3,6 +3,7 @@ var marker = null;
 var map = null;
 
 function initialize() {
+	console.log("called");
 	var mapOptions = {
 		zoom: 16,
 		center: new google.maps.LatLng(42.0551396, -87.6755195),

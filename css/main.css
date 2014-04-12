@@ -10,9 +10,11 @@
 	left: 50%;
 	top: 50%;
 }
-/*
-#map-container{
-	width: auto;
-	position: absolute;
+#selection-map {
+    padding: 0;
+    position : absolute !important; 
+    top : 120px !important;  
+    right : 0; 
+    bottom : 10px !important;  
+    left : 0 !important;     
 }
-*/
