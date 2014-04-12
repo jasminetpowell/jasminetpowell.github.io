@@ -2,6 +2,8 @@ var pos;
 var marker = null;
 var map = null;
 
+var baseURL = "http://jasminetpowell.github.io/";
+
 function initialize() {
 	console.log("called");
 	var mapOptions = {
@@ -32,7 +34,8 @@ function initialize() {
 	        title: 'Position',
 	        map: map,
 	        draggable: true,
-	        visible: true
+	        visible: true,
+	        animation : google.maps.Animation.DROP
 	    });
 	};
 
@@ -51,7 +54,17 @@ function initialize() {
 	 marker = createMarker(event.latLng, "name", "<b>Location</b><br>"+event.latLng);
 	//display button
 	document.getElementById('go-button').style.display = "block";
+
   });
+
+	var data2 = {
+    	"name":"John",
+        "lat":1.2,
+        "long":2.4
+    };
+
+  	$.post(baseURL + 'php/add_user.php', {'data2': data2}).done(function(response) {
+  	});
 
 
 }
